@@ -6,16 +6,16 @@
 /*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:28:58 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/26 19:04:39 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:57:44 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t count_words(const char *str, char c)
+static size_t	count_words(const char *str, char c)
 {
-	int i;
-	int counter;
+	int	i;
+	int	counter;
 
 	i = 0;
 	counter = 0;
@@ -37,23 +37,11 @@ static void	free_split(char **arr, int n)
 	}
 	free(arr);
 }
-
-char	**ft_split(char const *s, char c)
+static char **fill(char const *s, char **tab, char c, size_t words)
 {
-	size_t		i;
-	size_t		j;
-	size_t		start;
-	size_t		words;
-	char	**res;
-
-	if (!s)
-		return (NULL);
-	words = (int)count_words(s, c);
-	res = (char **)malloc(sizeof(char *) * words + 1);
-	if (!res)
-		return (NULL);
-	i = 0;
-	j = 0;
+	size_t	i=0;
+	size_t	j=0;
+	size_t	start;
 	while (j < words)
 	{
 		while (s[i] == c)
@@ -61,61 +49,75 @@ char	**ft_split(char const *s, char c)
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		res[j] = ft_substr(s, start, (i - start));
-		if (res[j] == NULL)
+		tab[j] = ft_substr(s, start, (i - start));
+		if (tab[j] == NULL)
 		{
-			free_split(res, j);
+			free_split(tab, j);
 			return (NULL);
 		}
 		j++;
 	}
-	res[words] = NULL;
-	return (res);
+	return (tab);
 }
-int main(void)
+char	**ft_split(char const *s, char c)
 {
-    char    **result;
-    int     i;
+	size_t	words;
+	char	**tab;
 
-    // Test 1
-    result = ft_split("Hello        World 42 Network", ' ');
-    i = 0;
-    printf("Test 1:\n");
-    while (result[i] != NULL)
-    {
-        printf("Word %d: %s1\n", i, result[i]);
-        i++;
-    }
+	if (!s)
+		return (NULL);
+	words = (int)count_words(s, c);
+	tab = (char **)malloc(sizeof(char *) * words + 1);
+	if (!tab)
+		return (NULL);
+	fill(s, tab, c, words);
+	tab[words] = NULL;
+	return (tab);
+}
+int	main(void)
+{
+	char **result;
+	int i;
 
-    // Test 2
-    result = ft_split(",,,abc,,,def,,ghi", ',');
-    i = 0;
-    printf("\nTest 2:\n");
-    while (result[i] != NULL)
-    {
-        printf("Word %d: %s\n", i, result[i]);
-        i++;
-    }
+	// Test 1
+	result = ft_split("Hello        ,World 42 Network", ' ');
+	i = 0;
+	printf("Test 1:\n");
+	while (result[i] != NULL)
+	{
+		printf("Word %d: %s1\n", i, result[i]);
+		i++;
+	}
 
-    // Test 3
-    result = ft_split("one;two;three;four", ';');
-    i = 0;
-    printf("\nTest 3:\n");
-    while (result[i] != NULL)
-    {
-        printf("Word %d: %s\n", i, result[i]);
-        i++;
-    }
+	// Test 2
+	result = ft_split(",,,abc,,,def,,ghi", ',');
+	i = 0;
+	printf("\nTest 2:\n");
+	while (result[i] != NULL)
+	{
+		printf("Word %d: %s\n", i, result[i]);
+		i++;
+	}
 
-    // Test 4 (empty string)
-    result = ft_split("", ' ');
-    i = 0;
-    printf("\nTest 4:\n");
-    while (result[i] != NULL)
-    {
-        printf("Word %d: %s\n", i, result[i]);
-        i++;
-    }
+	// Test 3
+	result = ft_split("one;two;three;four", ';');
+	i = 0;
+	printf("\nTest 3:\n");
+	while (result[i] != NULL)
+	{
+		printf("Word %d: %s\n", i, result[i]);
+		i++;
+	}
 
-    return 0;
+	// Test 4 (empty string)
+	result = ft_split("", ' ');
+	i = 0;
+	printf("\nTest 4:\n");
+	while (result[i] != NULL)
+	{
+		printf("Word %d: %s\n", i, result[i]);
+		i++;
+	}
+
+	return (0);
 }

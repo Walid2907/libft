@@ -1,4 +1,16 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/27 13:10:24 by wkerdad           #+#    #+#             */
+/*   Updated: 2025/10/27 13:10:24 by wkerdad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -8,5 +20,5 @@ void	ft_putchar_fd(char c, int fd)
 /*int main()
 {
 	ft_putchar_fd('5',1);
-	return 0;
+	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:22:13 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/24 15:37:15 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/10/27 13:07:18 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 // int main()
 // {
-//     int *tab = (int *)ft_calloc(5, sizeof(int));
-// allocate memory for 5 ints
+//     int *tab = calloc(0, 0);
 //     if (!tab) {
 //         printf("Memory allocation failed\n");
 //         return (1);
@@ -40,5 +39,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 //     }
 
 //     free(tab); // free the allocated memory
+
 //     return (0);
 // }

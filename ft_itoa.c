@@ -1,47 +1,91 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/27 13:10:45 by wkerdad           #+#    #+#             */
+/*   Updated: 2025/10/27 16:18:16 by wkerdad          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_itoa(int n)
+#include "libft.h"
+
+static void reverse(char *str)
 {
-    int i = 0;
-    int d = n;
-    char *str;
+    char temp;
+    int start;
+    int end;
 
-    if (n == -2147483648)
-        return ft_strdup("-2147483648");
-    if (n <= 0)
-        i = 1;
-    while (d != 0)
+    start = 0;
+    end = ft_strlen(str) - 1;
+    while (start < end)
     {
-        d = d / 10;
+        temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        end--;
+        start++;
+    }
+}
+
+static int count_numb(int n)
+{
+    int i;
+
+    i = 0;
+    while (n != 0)
+    {
+        n = n / 10;
         i++;
     }
-    str = malloc(i + 1);
-    if (str == NULL)
-        return NULL;
+    return (i);
+}
+
+char *fill(char *str, size_t nm, int isnegative)
+{
+    int i;
+
+    i = 0;
+    while (nm > 0)
+    {
+        str[i] = (nm % 10) + '0';
+        nm = nm / 10;
+        i++;
+    }
+    if (isnegative == 1)
+        str[i++] = '-';
     str[i] = '\0';
-    i -= 1;
-    if (d < 0)
-        str[0] = '-';
-    if (n < 0)
-        n = -n;
-    if (n == 0)
-    {
-        str[0] = '0';
-        return (str);
-    }
-    while (n > 0)
-    {
-        str[i] = (n % 10) + '0';
-        n = n / 10;
-        i--;
-    }
     return (str);
 }
 
-int main()
+char *ft_itoa(int n)
 {
-	char *str = ft_itoa(29012007);
-	printf("%s",str);
-	free(str);
+    int isnegative;
+    char *str;
+    size_t nm;
+
+    isnegative = 0;
+    if (n == 0)
+        return (ft_strdup("0"));
+    if (n < 0)
+    {
+        isnegative = 1;
+        nm = -(size_t)n;
+    }
+    if (n > 0)
+        nm = n;
+    str = malloc(count_numb(n) + 1 + isnegative);
+    fill(str, nm, isnegative);
+    reverse(str);
+    return (str);
 }
-               
+// int main()
+// {
+// 	printf("%s\n",ft_itoa(0));
+//     printf("%s\n",ft_itoa(1474864));
+//     printf("%s\n",ft_itoa(21648));
+//     printf("%s\n",ft_itoa(0));
+//     printf("%s\n",ft_itoa(-2147));
+// }
