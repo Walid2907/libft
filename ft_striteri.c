@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 18:22:01 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/28 14:08:14 by wkerdad          ###   ########.fr       */
+/*   Created: 2025/10/28 13:53:19 by wkerdad           #+#    #+#             */
+/*   Updated: 2025/10/28 14:08:48 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     if (s == NULL || f == NULL)
         return (NULL);
     size_t s_len;
-    char *result;
     size_t  i;
     
     i = 0;
     s_len = ft_strlen(s);
-    result = malloc(s_len + 1);
-    if(result == NULL)
-        return (NULL);
     while (s[i] != '\0')
     {
-        result[i] = f(i,s[i]);
+       f(i,&s[i]);
         i++;
     }
-    result[i] = '\0';
-    return (result);
+    s[i] = '\0';
 }
+// void to_upper(unsigned int i, char *c)
+// {
+//     (void)i; // not used
+//     if (*c >= 'a' && *c <= 'z')
+//         *c -= 32;
+// }
+// int main(void)
+// {
+//     char str[] = "hellowalid3";
+//     ft_striteri(str, to_upper);
+//     printf("%s\n", str); // HELLO
+// }
