@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
+/*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:28:58 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/27 17:57:44 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/10/30 18:21:23 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,15 @@ static void	free_split(char **arr, int n)
 	}
 	free(arr);
 }
-static char **fill(char const *s, char **tab, char c, size_t words)
+
+static char	**fill(char const *s, char **tab, char c, size_t words)
 {
-	size_t	i=0;
-	size_t	j=0;
+	size_t	i;
+	size_t	j;
 	size_t	start;
+
+	i = 0;
+	j = 0;
 	while (j < words)
 	{
 		while (s[i] == c)
@@ -59,6 +63,7 @@ static char **fill(char const *s, char **tab, char c, size_t words)
 	}
 	return (tab);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	words;
@@ -67,14 +72,32 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = (int)count_words(s, c);
-	tab = (char **)malloc(sizeof(char *) * words + 1);
+	tab = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
-	fill(s, tab, c, words);
+	if (fill(s, tab, c, words) == NULL)
+		return (NULL);
 	tab[words] = NULL;
 	return (tab);
 }
-int	main(void)
+// #include<stdio.h>
+
+// int main()
+// {
+// 	char *s = "split  ||this|for|me|||||!|";
+// 	int i = 0;
+// 	char **result = ft_split(s, '|');
+// 	if (!result)
+// 		return (1);
+// 	while (result[i])
+// 	{
+// 		printf("%s\n",result[i]);
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// }
+/*int	main(void)
 {
 	char **result;
 	int i;
@@ -120,4 +143,4 @@ int	main(void)
 	}
 
 	return (0);
-}
+}*/

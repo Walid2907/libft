@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
+/*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 12:30:42 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/25 11:36:13 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/10/30 18:21:59 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,16 @@ char	*ft_strrchr(const char *s, int c)
 		return (NULL);
 	len = ft_strlen(s);
 	str = (unsigned char *)s;
-	while (len-- >= 0)
-		if (*(str + len) == c)
+	while (len >= 0)
+	{
+		if (*(str + len) == (unsigned char)c)
 			return ((char *)(s + len));
+		len--;
+	}
 	return (NULL);
 }
 // int	main(void)
 // {
-// 	int c = 'a';
+// 	int c = '\0';
 // 	printf("%s \n", ft_strrchr("awalid nadi dblaza", c));
 // }

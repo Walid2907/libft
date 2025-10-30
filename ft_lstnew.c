@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 17:53:13 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:20:55 by wkerdad          ###   ########.fr       */
+/*   Created: 2025/10/30 13:06:55 by wkerdad           #+#    #+#             */
+/*   Updated: 2025/10/30 18:20:49 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
-	char	*ptr;
+	t_list	*node;
 
-	if (s == NULL)
+	node = malloc(sizeof(t_list));
+	if (node == NULL)
 		return (NULL);
-	i = 0;
-	ptr = (char *)s;
-	while (i < n)
-	{
-		if (*(ptr + i) == (char)c)
-		{
-			return ((void *)ptr + i);
-		}
-		i++;
-	}
-	return (0);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
-// int main ()
-// {
-//     // char *s =  ;
-//     // //char *d = "walid";         //(s,'l',3)
-//     // char *ptr = );
-
-// 	//printf("1");
-//     printf("%p \n",ft_memchr("alidnadi",'w',2));
-// 	ft_memchr("alidnadi",'w',2);
-// }

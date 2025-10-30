@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
+/*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:24:19 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/25 11:35:03 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/10/30 18:21:29 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -20,7 +21,7 @@ char	*ft_strchr(const char *str, int c)
 		return (NULL);
 	s = (unsigned char *)str;
 	if (c == '\0')
-		return ((char *)s);
+		return ((char *)(s + ft_strlen(str)));
 	while (*s != '\0')
 	{
 		if (*s == (unsigned char)c)
@@ -29,8 +30,8 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-// int main()
-// {
-// 	// char c = 'i';
-// 	printf("%s \n",ft_strchr("walid",'u'));
-// }
+// int	main(void)
+//{
+//	// char c = 'i';
+//	printf("%s \n", ft_strchr("walid", '\0'));
+//}

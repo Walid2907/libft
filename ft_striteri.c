@@ -3,30 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wkerdad <wkerdad@student.42.fr>            +#+  +:+       +#+        */
+/*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:53:19 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/28 14:08:48 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/10/30 18:21:34 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    if (s == NULL || f == NULL)
-        return (NULL);
-    size_t s_len;
-    size_t  i;
-    
-    i = 0;
-    s_len = ft_strlen(s);
-    while (s[i] != '\0')
-    {
-       f(i,&s[i]);
-        i++;
-    }
-    s[i] = '\0';
+	size_t	i;
+
+	if (s == NULL || f == NULL)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+	s[i] = '\0';
 }
 // void to_upper(unsigned int i, char *c)
 // {
