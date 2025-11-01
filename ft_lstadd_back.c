@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:31:18 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:20:31 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/01 11:50:31 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	while (ptr->next != NULL)
 		ptr = ptr->next;
-	ptr->next = new;
 	new->next = NULL;
+	ptr->next = new;
 }
 // void print_list(t_list *lst)
 // {
