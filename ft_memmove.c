@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:57:38 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:05 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 15:32:01 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 	}
 	return (dest);
 }
-// int	main(void)
-// {
-// 	char s[50] = "abcdef";
-// 	ft_memmove(s+2, s, 4);
-// 	printf("%s\n", s);
-// 	char  b[50] = "abcdef";
-// 	ft_memmove(b, b+2, 4);
-// 	printf("%s\n", b);
-// 		char f[50] = "abcdef";
-// 	memmove(f+2, f, 4);
-// 	printf("%s\n", f);
-// 	char  g[50] = "abcdef";
-// 	memmove(g, g+2, 4);
-// 	printf("%s\n", g);
-// }

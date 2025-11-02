@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 17:12:36 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:54 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:23 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-// int main ()
-// {
-//     char *s1 = "";
-//     char *s2 = "walia";
-//     int result = ft_strncmp(s1,s2,5);
-//     printf("%d",result);
-// }

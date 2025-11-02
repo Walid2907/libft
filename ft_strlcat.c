@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 20:40:40 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:40 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:12 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_size + i] = '\0';
 	return (src_size + dest_size);
 }
-// int main()
-// {
-// 	char d[10] = "abc";
-// 	printf("%zu\n", strlcat(d, " defghijkl", sizeof(d)));
-// 	printf("%s\n", d);
-// }

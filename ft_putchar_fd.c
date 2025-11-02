@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:10:24 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:12 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 15:31:56 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,3 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 	return ;
 }
-/*int main()
-{
-	ft_putchar_fd('5',1);
-	return (0);
-}*/

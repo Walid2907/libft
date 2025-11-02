@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:10:45 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:20:28 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 14:51:27 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,11 +83,3 @@ char	*ft_itoa(int n)
 	reverse(str);
 	return (str);
 }
-// int main()
-// {
-// 	printf("%s\n",ft_itoa(0));
-//     printf("%s\n",ft_itoa(1474864));
-//     printf("%s\n",ft_itoa(21648));
-//     printf("%s\n",ft_itoa(0));
-//     printf("%s\n",ft_itoa(-2147));
-// }

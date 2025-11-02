@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:14:02 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:44 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:16 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (src_len);
 }
-// int	main(void)
-// {
-// 	char	*src;
-// 	char	*dest;
-
-// 	src = "hello world";
-// 	ft_strlcpy(dest, src, 9);
-// 	printf("%s\n", dest);
-// 	printf("%s\n", src);
-// }

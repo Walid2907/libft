@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:35:53 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:37 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:08 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-// int	main(void)
-// {
-// 	char *s1 = "walid +";
-// 	char *s2 = " ahmad ";
-// 	char *str = ft_strjoin(s1, s2);
-// 	printf("%s\n", str);
-// }

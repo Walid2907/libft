@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 19:37:49 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:57 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:27 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-// int main()
-// {
-//     char *big = "walid";
-//     char *little = "wALIDNADI";
-//     printf("%s \n", ft_strnstr(big, little, 10));
-// 	printf("%s \n", ft_strnstr(big, little, 10));
-// space after specifier is required (3andak tnsa)
-// }

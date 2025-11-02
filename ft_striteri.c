@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:53:19 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:34 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:05 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 	s[i] = '\0';
 }
-// void to_upper(unsigned int i, char *c)
-// {
-//     (void)i; // not used
-//     if (*c >= 'a' && *c <= 'z')
-//         *c -= 32;
-// }
-// int main(void)
-// {
-//     char str[] = "hellowalid3";
-//     ft_striteri(str, to_upper);
-//     printf("%s\n", str); // HELLO
-// }

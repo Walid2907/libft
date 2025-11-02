@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 19:04:53 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:22:06 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:42 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_str[i] = '\0';
 	return (sub_str);
 }
-// int	main(void)
-// {
-// 	char s[] = "walid";
-// 	char *string = ft_substr(s, 90, 700);
-// 	printf("%s\n%s\n", string, s);
-// }

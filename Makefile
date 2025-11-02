@@ -6,13 +6,12 @@
 #    By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/30 18:22:33 by wkerdad           #+#    #+#              #
-#    Updated: 2025/11/01 12:05:01 by wkerdad          ###   ########.fr        #
+#    Updated: 2025/11/02 19:42:29 by wkerdad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = cc
-SO_NAME = libft.so
 
 CFLAGS = -Wall -Wextra -Werror
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c\
@@ -27,9 +26,6 @@ BONUS_OBJ = $(BONUS:.c=.o)
 
 all : $(NAME)
 
-so: $(OBJ)
-	$(CC) -shared -o $(SO_NAME) $(OBJFILES) $(BONUS_OBJ)
-
 $(NAME) : $(OBJFILES)
 	ar rcs $(NAME) $(OBJFILES)
 
@@ -39,7 +35,6 @@ $(NAME) : $(OBJFILES)
 bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
-	
 clean : 
 	rm -f $(OBJFILES) $(BONUS_OBJ)
 
@@ -48,4 +43,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re so
+.PHONY : all clean fclean re

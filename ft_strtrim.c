@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 15:04:08 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:22:02 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:44:38 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new = ft_substr(s1, start, ((end - start) + 1));
 	return (new);
 }
-// int	main(void)
-// {
-// 	char *s = "xxyzhitijniutxyz";
-// 	char *move = "z";
-// 	char *str = ft_strtrim(s, move);
-// 	printf("%s", str);
-// 	// lwaid
-// }

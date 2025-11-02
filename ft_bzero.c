@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:01:59 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:19:57 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:42:58 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-// int main()
-// {
-// 	int tab[]={1,5,7,4,9};
-// 	ft_bzero(tab,sizeof(tab));
-// 	for(int  i = 0; i <=4;i++)
-// 	{
-// 		printf("%c",tab[i]);
-// 	}
-// }

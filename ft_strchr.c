@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:24:19 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:29 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:43:58 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,3 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-// int	main(void)
-//{
-//	// char c = 'i';
-//	printf("%s \n", ft_strchr("walid", '\0'));
-//}

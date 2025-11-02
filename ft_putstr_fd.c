@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:10:41 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:21:20 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:43:45 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,3 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
-
-/*int main()
-{
-	ft_putstr_fd("wafhudbvnousvavjnasnvi\nevisdvbiua\n",1);
-}*/

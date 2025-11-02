@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 17:53:13 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/10/30 18:20:55 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/02 19:43:22 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-// int main ()
-// {
-//     // char *s =  ;
-//     // //char *d = "walid";         //(s,'l',3)
-//     // char *ptr = );
-
-// 	//printf("1");
-//     printf("%p \n",ft_memchr("alidnadi",'w',2));
-// 	ft_memchr("alidnadi",'w',2);
-// }
