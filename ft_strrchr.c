@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 12:30:42 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/11/02 19:44:33 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/03 21:18:48 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int				len;
+	size_t			len;
 	unsigned char	*str;
 
 	if (s == NULL)

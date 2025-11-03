@@ -6,7 +6,7 @@
 /*   By: wkerdad <wkerdad@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 19:04:53 by wkerdad           #+#    #+#             */
-/*   Updated: 2025/11/02 19:44:42 by wkerdad          ###   ########.fr       */
+/*   Updated: 2025/11/03 21:06:32 by wkerdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub_str;
-	size_t	i;
-	size_t	new_len;
+	char		*sub_str;
+	size_t		i;
+	size_t		new_len;
 
 	if (s == NULL)
 		return (NULL);
